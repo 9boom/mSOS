@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mSOS</string>
+    <!-- Mode Labels -->
+    <string name="victim_mode">โหมดผู้ประสบภัย</string>
+    <string name="rescuer_mode">โหมดกู้ภัย</string>
+
+    <!-- Connection Status -->
+    <string name="connection_online">เชื่อมต่ออินเทอร์เน็ต</string>
+    <string name="connection_offline">โหมดออฟไลน์</string>
+    <string name="connection_online_desc">รายงาน SOS จะถูกส่งไปยังระบบทันที</string>
+    <string name="connection_offline_desc">ใช้ Bluetooth และ WiFi Direct เพื่อส่งต่อข้อความผ่านอุปกรณ์ใกล้เคียง</string>
+    <string name="test_offline">ทดสอบโหมดออฟไลน์</string>
+    <string name="back_online">กลับโหมดออนไลน์</string>
+
+    <!-- SOS Form -->
+    <string name="send_sos">ส่งสัญญาณ SOS</string>
+    <string name="sos_report_form">รายงานขอความช่วยเหลือ</string>
+    <string name="full_name">ชื่อ-นามสกุล</string>
+    <string name="contact_info">ช่องทางติดต่อ</string>
+    <string name="contact_hint">เบอร์โทรศัพท์, LINE ID, etc.</string>
+    <string name="situation_details">รายละเอียดสถานการณ์</string>
+    <string name="get_location">ระบุตำแหน่งจาก GPS</string>
+    <string name="location_set">ระบุตำแหน่งแล้ว</string>
+    <string name="coordinates">พิกัด: %1$s, %2$s</string>
+    <string name="submit_sos">ส่งสัญญาณ SOS</string>
+
+    <!-- Rescuer Mode -->
+    <string name="rescuer_header">โหมดกู้ภัย</string>
+    <string name="rescuer_desc">รับข้อมูลรายงาน SOS แบบเรียลไทม์</string>
+    <string name="all_reports">รายงาน SOS ทั้งหมด (%1$d)</string>
+    <string name="status_waiting">รอความช่วยเหลือ</string>
+    <string name="contact_label">ติดต่อ: %1$s</string>
+    <string name="relayed_via_mesh">ส่งผ่านเครือข่าย Bluetooth/WiFi Direct</string>
+    <string name="view_on_map">ดูบนแผนที่</string>
+</resources>
