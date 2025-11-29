@@ -14,7 +14,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/mSOS/.gitignore",
+      "selection": {
+        "end": {
+          "column": 24,
+          "index": 1156,
+          "line": 61
+        },
+        "start": {
+          "column": 24,
+          "index": 1156,
+          "line": 61
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/mSOS/app/src/main/java/main/sos/MainActivity.java"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/mSOS/.gitignore"
 }
