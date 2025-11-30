@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
-                    android:text="SOS Report System"
+                    android:text="mSOS Network"
                     android:textSize="20sp"
                     android:textColor="#111827"
                     android:textStyle="bold"/>
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:text="โหมดผู้ประสบภัย"
+                android:text="ฉันคือผู้ประสบภัย"
                 android:textSize="14sp"
                 app:backgroundTint="#DC2626"
                 app:cornerRadius="8dp"/>
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:text="โหมดกู้ภัย"
+                android:text="ฉันคือกู้ภัย"
                 android:textSize="14sp"
                 app:backgroundTint="#E5E7EB"
                 app:strokeColor="#E5E7EB"
