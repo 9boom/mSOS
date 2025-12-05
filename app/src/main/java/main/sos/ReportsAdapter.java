@@ -40,6 +40,8 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ReportVi
         holder.tvReporterName.setText(report.name);
         holder.tvTimestamp.setText(report.timestamp);
         holder.tvStatus.setText(report.status);
+        holder.tvLevel.setText(report.level);
+        holder.tvType.setText(report.type);
         
         holder.tvLocation.setText(holder.itemView.getContext().getString(
             R.string.coordinates,
@@ -78,6 +80,8 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ReportVi
         public TextView tvLocation;
         public TextView tvContact;
         public TextView tvDetails;
+        public TextView tvLevel;
+        public TextView tvType;
         public LinearLayout layoutRelayedBadge;
         public MaterialButton btnViewOnMap;
         
@@ -91,6 +95,8 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ReportVi
             tvDetails = itemView.findViewById(R.id.tvDetails);
             layoutRelayedBadge = itemView.findViewById(R.id.layoutRelayedBadge);
             btnViewOnMap = itemView.findViewById(R.id.btnViewOnMap);
+            tvLevel = itemView.findViewById(R.id.tvLevel);
+            tvType = itemView.findViewById(R.id.tvType);
         }
     }
 }

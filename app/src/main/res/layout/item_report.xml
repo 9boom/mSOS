@@ -62,6 +62,18 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp"
                 android:background="@drawable/bg_status_badge"/>
+             <TextView
+                android:id="@+id/tvLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="ระดับวิกฤติ"
+                android:textColor="#991B1B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/bg_status_badge"/>
 
         </LinearLayout>
 
@@ -97,7 +109,34 @@
                     android:textSize="14sp"/>
 
             </LinearLayout>
-
+            <!-- Details Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp">
+                 <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+            <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_map_pin"
+                    android:tint="#9CA3AF"
+                    android:contentDescription="Location Icon"/>
+            <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="ตกอยู่ในสถานการณ์: น้ำท่วม 🌊🏠"
+                    android:textColor="#4B5563"
+                    android:textSize="14sp"/>
+                 </LinearLayout>
+            </LinearLayout>
             <!-- Contact -->
             <TextView
                 android:id="@+id/tvContact"

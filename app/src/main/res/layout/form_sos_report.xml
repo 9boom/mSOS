@@ -2,149 +2,187 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@android:color/white"
+    android:layout_width="match_parent"
     app:strokeColor="#E5E7EB"
+    app:cardElevation="0dp"
     app:strokeWidth="1dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="0dp">
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_width="match_parent"
+        android:padding="24dp"
+        android:orientation="vertical">
 
-        <!-- Header -->
         <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
+            android:layout_width="match_parent"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:textSize="18sp"
+                android:textColor="#111827"
                 android:layout_weight="1"
                 android:text="รายงานขอความช่วยเหลือ"
-                android:textColor="#111827"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/btnCloseForm"
-                android:layout_width="20dp"
                 android:layout_height="20dp"
+                android:layout_width="20dp"
                 android:src="@drawable/ic_close"
-                android:tint="#9CA3AF"
-                android:clickable="true"
-                android:focusable="true"
+                android:contentDescription="Close"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Close"/>
+                android:clickable="true"
+                android:tint="#9CA3AF"
+                android:focusable="true"
+                android:id="@+id/btnCloseForm" />
 
         </LinearLayout>
 
-        <!-- Name Input -->
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            android:textColor="#000"
             android:hint="ชื่อ-นามสกุล"
-            app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusBottomEnd="8dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Contact Input -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="ช่องทางติดต่อ"
-            app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
             app:boxCornerRadiusBottomStart="8dp"
             app:boxCornerRadiusBottomEnd="8dp"
-            app:helperText="เบอร์โทรศัพท์, LINE ID, etc.">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etContact"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Details Input -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="รายละเอียดสถานการณ์"
             app:boxBackgroundMode="outline"
-            app:boxCornerRadiusTopStart="8dp"
-            app:boxCornerRadiusTopEnd="8dp"
-            app:boxCornerRadiusBottomStart="8dp"
-            app:boxCornerRadiusBottomEnd="8dp">
+            app:boxCornerRadiusTopStart="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etDetails"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:lines="4"
-                android:gravity="top|start"/>
+                android:layout_width="match_parent"
+                android:inputType="textPersonName"
+                android:id="@+id/etName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Location Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGetLocation"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            android:hint="ช่องทางติดต่อ"
+            app:helperText="เบอร์โทรศัพท์, LINE ID, etc."
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:id="@+id/etContact" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Dropdown สำหรับระดับความรุนแรง -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="16dp"
+            android:hint="ระดับความรุนแรง"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/etLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="#000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        
+        <!-- Dropdown สำหรับระดับความรุนแรง -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="16dp"
+            android:hint="ฉันอยู่ในสถานการณ์"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/etType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="#000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            android:hint="รายละเอียดสถานการณ์"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="top|start"
+                android:lines="4"
+                android:inputType="textMultiLine"
+                android:id="@+id/etDetails" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:layout_marginBottom="8dp"
-            android:text="ระบุตำแหน่งจาก GPS"
-            android:textColor="#374151"
             app:icon="@drawable/ic_map_pin"
-            app:iconTint="#374151"
             app:backgroundTint="#F3F4F6"
             app:cornerRadius="8dp"
-            style="@style/Widget.Material3.Button.OutlinedButton"/>
+            app:iconTint="#374151"
+            android:textColor="#374151"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:id="@+id/btnGetLocation"
+            android:text="ระบุตำแหน่งจาก GPS" />
 
-        <!-- Location Info -->
         <TextView
-            android:id="@+id/tvLocationInfo"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="พิกัด: 13.7563, 100.5018"
-            android:textColor="#6B7280"
+            android:visibility="gone"
             android:textSize="12sp"
-            android:visibility="gone"/>
+            android:textColor="#6B7280"
+            android:id="@+id/tvLocationInfo"
+            android:text="พิกัด: 13.7563, 100.5018" />
 
-        <!-- Submit Button -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSubmitSOS"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ส่งสัญญาณ SOS"
-            android:textSize="16sp"
-            android:paddingVertical="12dp"
+            android:layout_width="match_parent"
             app:icon="@drawable/ic_send"
-            app:iconGravity="textStart"
             app:backgroundTint="#DC2626"
-            app:cornerRadius="8dp"/>
+            android:paddingVertical="12dp"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            android:id="@+id/btnSubmitSOS"
+            android:text="ส่งสัญญาณ SOS"
+            app:iconGravity="textStart" />
 
     </LinearLayout>
 
